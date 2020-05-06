@@ -7,7 +7,8 @@ const getData = () => {
     .then((result) => {
       data = result;
       console.log(data);
-      paintMenuList();
+      paintList();
+      //   paintMenuList();
       return data;
     });
 };
