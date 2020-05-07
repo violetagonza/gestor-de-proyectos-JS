@@ -55,7 +55,7 @@ const paintModal = () => {
   htmlCode += `</div>`;
   htmlCode += `<div class="col-11 pl-0 pr-0">`;
   htmlCode += `<h6 class="h6">Descripción</h6>`;
-  htmlCode += `<textarea class="app-edit-textarea">`;
+  htmlCode += `<textarea id=${foundCard.id} class="app-edit-textarea js-modal-textarea">`;
   htmlCode += `"${foundCard.description}"`;
   htmlCode += `</textarea>`;
   htmlCode += `</div>`;
@@ -147,6 +147,8 @@ const listenModalItems = () => {
   btn.addEventListener('click', handleBtn);
   const titleInput = document.querySelector('.js-modal-title');
   titleInput.addEventListener('change', handleModalTitle);
+  const descInput = document.querySelector('.js-modal-textarea');
+  descInput.addEventListener('change', handleModalDesc);
 };
 
 // Add listener to card

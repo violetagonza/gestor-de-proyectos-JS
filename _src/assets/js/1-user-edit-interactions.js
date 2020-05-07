@@ -32,16 +32,24 @@ const handleModalTitle = (ev) => {
       if (card.id === changedEl) {
         card.title = ev.currentTarget.value;
       }
-      console.log(data);
-      setInLS();
-      paintList();
     }
-
-    // if (item.id === parseInt(changedEl)) {
-    // change array info with value
-    // item.title = ev.currentTarget.value;
-    // }
   }
-  // console.log(data);
-  // setInLS();
+  setInLS();
+  paintList();
+};
+
+//Handle modal textarea
+
+const handleModalDesc = (ev) => {
+  changedEl = ev.currentTarget.id;
+  console.log(changedEl);
+
+  for (const item of data) {
+    for (const card of item.cards) {
+      if (card.id === changedEl) {
+        card.description = ev.currentTarget.value;
+      }
+    }
+  }
+  setInLS();
 };
