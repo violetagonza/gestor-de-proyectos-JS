@@ -8,7 +8,7 @@ const paintList = () => {
     htmlCode += `<div class="app-list">`;
     htmlCode += ` <div class="p-1 rounded-sm bg-primary shadow">`;
     htmlCode += ` <form class="app-list-form align-middle p-1 position-relative">`;
-    htmlCode += ` <input value='${item.title}' class="js-list app-list-input form-control form-control-sm" placeholder="Tareas importantes" type="text" title="Editar el título de la lista" />`;
+    htmlCode += ` <input id=${item.id} value='${item.title}' class="js-list app-list-input form-control form-control-sm" placeholder="Tareas importantes" type="text" title="Editar el título de la lista" />`;
     htmlCode += `<div class="app-list-options">`;
     htmlCode += ` <span class="pl-2 pr-2 text-white-50 fas fa-ellipsis-v"></span>`;
     htmlCode += ` <div class="app-list-btns btn-group btn-group-sm">`;

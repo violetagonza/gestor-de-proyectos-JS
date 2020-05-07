@@ -15,4 +15,4 @@ const getData = () => {
     });
 };
 
-getData();
+// getData();
