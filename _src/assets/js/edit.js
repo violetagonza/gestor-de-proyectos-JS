@@ -6,13 +6,14 @@ let newArticle;
 
 //handle click on card
 const handleCard = (ev) => {
-  ev.stopPropagation();
-
   //search cliked card
   clickedID = ev.currentTarget.id;
+
   for (const card of data) {
     for (const item of card.cards) {
-      if (item.id === clickedID) {
+      if (item.id === parseInt(clickedID)) {
+        foundCard = item;
+      } else if (item.id === clickedID) {
         foundCard = item;
       }
     }
@@ -122,7 +123,7 @@ const paintModal = () => {
   htmlCode += `<span class="fas fa-share-alt mr-2"></span>`;
   htmlCode += `Mover`;
   htmlCode += `</button>`;
-  htmlCode += `<button type="button" class="btn btn-primary btn-sm mb-2 w-100 text-left">`;
+  htmlCode += `<button id=${foundCard.id} type="button" class="js-mod-del-btn btn btn-primary btn-sm mb-2 w-100 text-left">`;
   htmlCode += `<span class="fas fa-trash-alt mr-2"></span>`;
   htmlCode += `Borrar`;
   htmlCode += `</button>`;
@@ -149,6 +150,8 @@ const listenModalItems = () => {
   titleInput.addEventListener('change', handleModalTitle);
   const descInput = document.querySelector('.js-modal-textarea');
   descInput.addEventListener('change', handleModalDesc);
+  const deleteModBtn = document.querySelector('.js-mod-del-btn');
+  deleteModBtn.addEventListener('click', handleModalDel);
 };
 
 // Add listener to card

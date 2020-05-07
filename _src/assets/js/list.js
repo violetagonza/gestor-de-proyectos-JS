@@ -54,7 +54,7 @@ const paintList = () => {
       htmlCode += `</div>`;
       htmlCode += `</article>`;
     }
-    htmlCode += `<button type="button" class="ml-1 btn btn-primary btn-sm text-white-50" title="Añadir una nueva tarjeta">`;
+    htmlCode += `<button type="button" id=${item.id} class="js-new-card-btn ml-1 btn btn-primary btn-sm text-white-50" title="Añadir una nueva tarjeta">`;
     htmlCode += `<span class="fas fa-plus"></span>`;
     htmlCode += `Añadir otra tarjeta`;
     htmlCode += `</button>`;
@@ -72,4 +72,5 @@ const paintList = () => {
   //Add listener to cards
   listenListInput();
   listenCard();
+  listenAddCardbtn();
 };
