@@ -5,10 +5,12 @@ const getData = () => {
   fetch('../../api/board.json')
     .then((response) => response.json())
     .then((result) => {
-      data = result;
+      for (let i = 0; i < result.board.list.length; i++) {
+        result.board.list[i].id = i;
+      }
+      data = result.board.list;
       console.log(data);
       paintList();
-      //   paintMenuList();
       return data;
     });
 };

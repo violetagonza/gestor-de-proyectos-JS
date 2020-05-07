@@ -10,7 +10,7 @@ const handleCard = (ev) => {
 
   //search cliked card
   clickedID = ev.currentTarget.id;
-  for (const card of data.board.list) {
+  for (const card of data) {
     for (const item of card.cards) {
       if (item.id === clickedID) {
         foundCard = item;

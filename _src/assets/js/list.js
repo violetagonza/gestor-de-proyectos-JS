@@ -4,7 +4,7 @@ const getMain = document.querySelector('.js-main');
 const paintList = () => {
   //Generate code for columns
   let htmlCode = '';
-  for (const item of data.board.list) {
+  for (const item of data) {
     htmlCode += `<div class="app-list">`;
     htmlCode += ` <div class="p-1 rounded-sm bg-primary shadow">`;
     htmlCode += ` <form class="app-list-form align-middle p-1 position-relative">`;
@@ -54,6 +54,10 @@ const paintList = () => {
       htmlCode += `</div>`;
       htmlCode += `</article>`;
     }
+    htmlCode += `<button type="button" class="ml-1 btn btn-primary btn-sm text-white-50" title="Añadir una nueva tarjeta">`;
+    htmlCode += `<span class="fas fa-plus"></span>`;
+    htmlCode += `Añadir otra tarjeta`;
+    htmlCode += `</button>`;
     htmlCode += `</div>`;
     htmlCode += `</div>`;
   }
@@ -66,5 +70,6 @@ const paintList = () => {
   getMain.innerHTML = htmlCode;
 
   //Add listener to cards
+  listenListInput();
   listenCard();
 };
