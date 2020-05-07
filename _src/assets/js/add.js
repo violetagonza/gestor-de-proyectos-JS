@@ -1,14 +1,16 @@
 'use strict';
-
+let num = 0;
 const handleAddCard = (ev) => {
   clickedID = ev.currentTarget.id;
+  num += 10;
   for (let i = 0; i < data.length; i++) {
+    console.log(num);
     if (data[i].id === parseInt(clickedID)) {
       data[i].cards.push({
-        id: i + '-n',
+        id: num.toString(),
+        title: 'Título de la tarea',
         description: 'descripción de la tarea',
         tags: ['JS', 'Css', 'Html'],
-        title: 'Título de la tarea',
       });
     }
   }

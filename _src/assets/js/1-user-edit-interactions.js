@@ -25,8 +25,6 @@ const listenListInput = () => {
 //Handle modal title input
 const handleModalTitle = (ev) => {
   changedEl = ev.currentTarget.id;
-  console.log(changedEl);
-
   for (const item of data) {
     for (const card of item.cards) {
       if (card.id === changedEl) {
@@ -35,15 +33,12 @@ const handleModalTitle = (ev) => {
     }
   }
   setInLS();
-  paintList();
 };
 
 //Handle modal textarea
 
 const handleModalDesc = (ev) => {
   changedEl = ev.currentTarget.id;
-  console.log(changedEl);
-
   for (const item of data) {
     for (const card of item.cards) {
       if (card.id === changedEl) {

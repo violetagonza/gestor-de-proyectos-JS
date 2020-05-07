@@ -140,6 +140,7 @@ const paintModal = () => {
 // Handle close btn
 const handleBtn = () => {
   newArticle.remove();
+  paintList();
 };
 
 // Add listeners to modal
