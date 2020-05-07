@@ -24,7 +24,7 @@ const paintList = () => {
     htmlCode += `</div>`;
     htmlCode += `</form>`;
     for (const card of item.cards) {
-      htmlCode += `<article class="js-card app-card m-1 mb-2 p-2 bg-white rounded-sm app-cursor-pointer shadow-sm" title="Abrir la tarjeta">`;
+      htmlCode += `<article id=${card.id} class="js-card app-card m-1 mb-2 p-2 bg-white rounded-sm app-cursor-pointer shadow-sm" title="Abrir la tarjeta">`;
       htmlCode += `<div>`;
       for (const tag of card.tags) {
         htmlCode += `<span class="badge badge-secondary bg-success">${tag}</span>`;
@@ -58,4 +58,5 @@ const paintList = () => {
 </div>`;
 
   getMain.innerHTML = htmlCode;
+  listenCard();
 };

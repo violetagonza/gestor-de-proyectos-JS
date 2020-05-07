@@ -5,7 +5,7 @@
         "title": "Backlog",
         "cards": [
           {
-            "id": "ajdfhjkrfh25",
+            "id": "1",
             "title": "Publicar en GitHub Pages",
             "description": "Lorem ipsum dolor sit amet",
             "tags": ["JS", "Css", "Html"]
@@ -16,13 +16,13 @@
         "title": "Por hacer",
         "cards": [
           {
-            "id": "sdf0s98234n3ki",
+            "id": "2",
             "title": "Unificar funcionalidad",
             "description": "Lorem ipsum dolor sit amet",
             "tags": ["JS", "Css", "Html"]
           },
           {
-            "id": "9f8734ksd",
+            "id": "3",
             "title": "Pintar el DOM",
             "description": "Lorem ipsum dolor sit amet",
             "tags": ["JS", "Css", "Html"]
@@ -33,7 +33,7 @@
         "title": "Haciendo",
         "cards": [
           {
-            "id": "qeuryjbcndb65",
+            "id": "4",
             "title": "Escuchar eventos",
             "description": "Lorem ipsum dolor sit amet",
             "tags": ["JS", "Css", "Html"]
@@ -44,19 +44,19 @@
         "title": "Hecho",
         "cards": [
           {
-            "id": "brueigtrejhgb98",
+            "id": "5",
             "title": "Manipular datos",
             "description": "Lorem ipsum dolor sit amet",
             "tags": ["JS", "Css", "Html"]
           },
           {
-            "id": "hjsgdjhvhjbjh78",
+            "id": "6",
             "title": "Guardar los datos en local storage",
             "description": "Lorem ipsum dolor sit amet",
             "tags": ["JS", "Css", "Html"]
           },
           {
-            "id": "bcjgtyuf5878",
+            "id": "7",
             "title": "Obtener datos del API",
             "description": "Lorem ipsum dolor sit amet",
             "tags": ["JS", "Css", "Html"]
