@@ -2,6 +2,7 @@
 const getMain = document.querySelector('.js-main');
 
 const paintList = () => {
+  //Generate code for columns
   let htmlCode = '';
   for (const item of data.board.list) {
     htmlCode += `<div class="app-list">`;
@@ -23,12 +24,17 @@ const paintList = () => {
     htmlCode += `</div>`;
     htmlCode += `</div>`;
     htmlCode += `</form>`;
+
+    //generate code for cards
     for (const card of item.cards) {
       htmlCode += `<article id=${card.id} class="js-card app-card m-1 mb-2 p-2 bg-white rounded-sm app-cursor-pointer shadow-sm" title="Abrir la tarjeta">`;
       htmlCode += `<div>`;
+
+      //Generate code for tags
       for (const tag of card.tags) {
         htmlCode += `<span class="badge badge-secondary bg-success">${tag}</span>`;
       }
+
       htmlCode += `</div>`;
       htmlCode += `<div>`;
       htmlCode += `<h3 class="h6">${card.title}</h3>`;
@@ -58,5 +64,7 @@ const paintList = () => {
 </div>`;
 
   getMain.innerHTML = htmlCode;
+
+  //Add listener to cards
   listenCard();
 };
