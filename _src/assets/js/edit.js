@@ -37,11 +37,11 @@ const paintModal = () => {
   htmlCode += `<h5 class="modal-title d-flex w-100">`;
   htmlCode += `<span class="fas fa-columns mt-3 mr-2 text-muted"></span>`;
   htmlCode += `<div class="w-100">`;
-  htmlCode += `<input class="app-edit-title form-control mb-0 border-0" placeholder="Filtrar tarjetas" type="text" value="${foundCard.title}" />`;
+  htmlCode += `<input id=${foundCard.id} class="js-modal-title app-edit-title form-control mb-0 border-0" placeholder="Filtrar tarjetas" type="text" value="${foundCard.title}" />`;
   htmlCode += `<small class="app-edit-subtitle d-block mt-0 text-muted"> en la lista <strong>Por hacer</strong> </small>`;
   htmlCode += `</div>`;
   htmlCode += `</h5>`;
-  htmlCode += `<button type="button" class="js-edit-close close" data-dismiss="modal">`;
+  htmlCode += `<button type="button" class="js-edit-close js-close-modal close" data-dismiss="modal">`;
   htmlCode += `<span>&times;</span>`;
   htmlCode += `</button>`;
   htmlCode += `</div>`;
@@ -143,8 +143,10 @@ const handleBtn = () => {
 
 // Add listeners to modal
 const listenModalItems = () => {
-  const btn = document.querySelector('.js-edit-close');
+  const btn = document.querySelector('.js-close-modal');
   btn.addEventListener('click', handleBtn);
+  const titleInput = document.querySelector('.js-modal-title');
+  titleInput.addEventListener('change', handleModalTitle);
 };
 
 // Add listener to card
