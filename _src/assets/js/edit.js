@@ -11,9 +11,7 @@ const handleCard = (ev) => {
 
   for (const card of data) {
     for (const item of card.cards) {
-      if (item.id === parseInt(clickedID)) {
-        foundCard = item;
-      } else if (item.id === clickedID) {
+      if (item.id === parseInt(clickedID) || item.id === clickedID) {
         foundCard = item;
       }
     }
