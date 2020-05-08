@@ -45,10 +45,10 @@ const paintList = () => {
       htmlCode += `<small title="Subtareas completadas: 3 de 5">3/5</small>`;
       htmlCode += `</div>`;
       htmlCode += `<div class="app-card-btns btn-group-vertical btn-group-sm">`;
-      htmlCode += `<button type="button" class="btn btn-light text-muted border shadow-sm app-card-move-up" title="Mover esta tarjeta hacia abajo">`;
+      htmlCode += `<button id=${card.id} type="button" class="js-arrow-up btn btn-light text-muted border shadow-sm app-card-move-up" title="Mover esta tarjeta hacia abajo">`;
       htmlCode += `<span class="fas fa-arrow-up"></span>`;
       htmlCode += `</button>`;
-      htmlCode += `<button type="button" class="btn btn-light text-muted border shadow-sm app-card-move-down" title="Mover esta tarjeta hacia arriba">`;
+      htmlCode += `<button id=${card.id} type="button" class="js-arrow-down btn btn-light text-muted border shadow-sm app-card-move-down" title="Mover esta tarjeta hacia arriba">`;
       htmlCode += `<span class="fas fa-arrow-down"></span>`;
       htmlCode += `</button>`;
       htmlCode += `</div>`;
@@ -62,15 +62,16 @@ const paintList = () => {
     htmlCode += `</div>`;
   }
   htmlCode += `<div>
-  <button type="button" class="btn btn-light btn-outline-primary btn-sm mr-5 shadow-sm" title="Añadir una nueva lista">
+  <button type="button" class="js-btn-add-col btn btn-light btn-outline-primary btn-sm mr-5 shadow-sm" title="Añadir una nueva lista">
     <span class="fas fa-plus"></span>
   </button>
 </div>`;
 
   getMain.innerHTML = htmlCode;
 
-  //Add listener to cards
+  //Add listener to list elements
   listenListInput();
   listenCard();
   listenAddCardbtn();
+  listenAddColBtn();
 };

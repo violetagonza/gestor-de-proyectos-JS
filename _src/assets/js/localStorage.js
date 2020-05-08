@@ -7,6 +7,7 @@ const getFromLs = () => {
   } else {
     getData();
   }
+  console.log(data);
 };
 
 const setInLS = () => {
