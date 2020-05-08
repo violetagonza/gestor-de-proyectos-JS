@@ -12,7 +12,7 @@ const paintList = () => {
     htmlCode += `<div class="app-list-options">`;
     htmlCode += ` <span class="pl-2 pr-2 text-white-50 fas fa-ellipsis-v"></span>`;
     htmlCode += ` <div class="app-list-btns btn-group btn-group-sm">`;
-    htmlCode += `<button type="button" class="btn btn-light text-muted border shadow-sm" title="Borrar esta tarjeta">`;
+    htmlCode += `<button id=${item.id} type="button" class="js-del-col-btn btn btn-light text-muted border shadow-sm" title="Borrar esta tarjeta">`;
     htmlCode += `<span class="fas fa-trash-alt"></span>`;
     htmlCode += `</button>`;
     htmlCode += `<button type="button" class="btn btn-light text-muted border shadow-sm app-list-move-left" title="Mover esta lista hacia la izquierda">`;
@@ -74,4 +74,5 @@ const paintList = () => {
   listenCard();
   listenAddCardbtn();
   listenAddColBtn();
+  listenDelColBtn();
 };

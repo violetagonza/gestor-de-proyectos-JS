@@ -2,7 +2,6 @@
 
 const handleModalDel = (ev) => {
   changedEl = ev.currentTarget.id;
-  console.log(changedEl);
 
   for (const item of data) {
     for (let i = 0; i < item.cards.length; i++) {
@@ -13,4 +12,21 @@ const handleModalDel = (ev) => {
   }
   setInLS();
   paintList();
+};
+
+const handleDelCol = (ev) => {
+  changedEl = ev.currentTarget.id;
+  for (let i = 0; i < data.length; i++) {
+    console.log(data[i].id, changedEl);
+    if (data[i].id === parseInt(changedEl)) {
+      data.splice(i, 1);
+    }
+  }
+  setInLS();
+  paintList();
+};
+const listenDelColBtn = () => {
+  document.querySelectorAll('.js-del-col-btn').forEach((btn) => {
+    btn.addEventListener('click', handleDelCol);
+  });
 };
