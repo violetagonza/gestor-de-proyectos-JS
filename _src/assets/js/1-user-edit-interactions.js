@@ -13,12 +13,6 @@ const handleListInput = (ev) => {
   }
   setInLS();
 };
-// listen list input
-const listenListInput = () => {
-  document.querySelectorAll('.js-list').forEach((input) => {
-    input.addEventListener('keyup', handleListInput);
-  });
-};
 
 // handle modal input
 

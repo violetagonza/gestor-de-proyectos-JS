@@ -27,11 +27,11 @@ const handleAddCol = (ev) => {
   paintList();
 };
 
-const listenAddCardbtn = () => {
-  document.querySelectorAll('.js-new-card-btn').forEach((btn) => {
-    btn.addEventListener('click', handleAddCard);
-  });
-};
-const listenAddColBtn = () => {
-  document.querySelector('.js-btn-add-col').addEventListener('click', handleAddCol);
-};
+// const listenAddCardbtn = () => {
+//   document.querySelectorAll('.js-new-card-btn').forEach((btn) => {
+//     btn.addEventListener('click', handleAddCard);
+//   });
+// };
+// const listenAddColBtn = () => {
+//   document.querySelector('.js-btn-add-col').addEventListener('click', handleAddCol);
+// };

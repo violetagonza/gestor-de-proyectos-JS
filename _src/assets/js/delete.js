@@ -25,8 +25,3 @@ const handleDelCol = (ev) => {
   setInLS();
   paintList();
 };
-const listenDelColBtn = () => {
-  document.querySelectorAll('.js-del-col-btn').forEach((btn) => {
-    btn.addEventListener('click', handleDelCol);
-  });
-};

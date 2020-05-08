@@ -134,30 +134,16 @@ const paintModal = () => {
   htmlCode += `</div>`;
   htmlCode += `</section>`;
   getModal.innerHTML = htmlCode;
-  listenModalItems();
+
+  // Add listener to modal elements
+  addListener('.js-close-modal', 'click', handleBtn);
+  addListener('.js-modal-title', 'change', handleModalTitle);
+  addListener('.js-modal-textarea', 'change', handleModalDesc);
+  addListener('.js-mod-del-btn', 'click', handleModalDel);
 };
 
 // Handle close btn
 const handleBtn = () => {
   newArticle.remove();
   paintList();
-};
-
-// Add listeners to modal
-const listenModalItems = () => {
-  const btn = document.querySelector('.js-close-modal');
-  btn.addEventListener('click', handleBtn);
-  const titleInput = document.querySelector('.js-modal-title');
-  titleInput.addEventListener('change', handleModalTitle);
-  const descInput = document.querySelector('.js-modal-textarea');
-  descInput.addEventListener('change', handleModalDesc);
-  const deleteModBtn = document.querySelector('.js-mod-del-btn');
-  deleteModBtn.addEventListener('click', handleModalDel);
-};
-
-// Add listener to card
-const listenCard = () => {
-  document.querySelectorAll('.js-card, .js-edit-close').forEach((card) => {
-    card.addEventListener('click', handleCard);
-  });
 };

@@ -70,9 +70,9 @@ const paintList = () => {
   getMain.innerHTML = htmlCode;
 
   //Add listener to list elements
-  listenListInput();
-  listenCard();
-  listenAddCardbtn();
-  listenAddColBtn();
-  listenDelColBtn();
+  addListenerAll('.js-card, .js-edit-close', 'click', handleCard);
+  addListenerAll('.js-list', 'keyup', handleListInput);
+  addListener('.js-btn-add-col', 'click', handleAddCol);
+  addListenerAll('.js-del-col-btn', 'click', handleDelCol);
+  addListenerAll('.js-new-card-btn', 'click', handleAddCard);
 };
