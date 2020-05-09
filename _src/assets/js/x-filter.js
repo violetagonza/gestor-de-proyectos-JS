@@ -1,17 +1,16 @@
 'use strict';
-let filteredData = [];
-const handleFilter = (ev) => {
-  for (const item of data) {
-    console.log(item.cards);
-    filteredData = item.cards.filter((item) => {
-      return item.cards.title.includes(ev.currentTarget.value);
-    });
-  }
+// let filteredData = [];
+// const handleFilter = (ev) => {
+//   for (const item of data) {
+//     for (const card of item.cards) {
+//       filteredData.push(card);
+//       // console.log(card);
+//     }
+//   }
+//   filteredData.filter((item) => {
+//   item.title.toUpperCase().includes(ev.currentTarget.value.toUpperCase()));
+//   });
+//   console.log(filteredData);
+// };
 
-  // filteredData = data.filter((item) => {
-  //   return item.cards.title.includes(ev.currentTarget.value);
-  // });
-  console.log(filteredData);
-};
-
-addListener('.js-filter-input', 'keyup', handleFilter);
+// addListener('.js-filter-input', 'keyup', handleFilter);
