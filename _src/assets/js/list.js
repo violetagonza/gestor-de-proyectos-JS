@@ -15,10 +15,10 @@ const paintList = () => {
     htmlCode += `<button id=${item.id} type="button" class="js-del-col-btn btn btn-light text-muted border shadow-sm" title="Borrar esta tarjeta">`;
     htmlCode += `<span class="fas fa-trash-alt"></span>`;
     htmlCode += `</button>`;
-    htmlCode += `<button type="button" class="btn btn-light text-muted border shadow-sm app-list-move-left" title="Mover esta lista hacia la izquierda">`;
+    htmlCode += `<button type="button" class="js-col-left btn btn-light text-muted border shadow-sm app-list-move-left" title="Mover esta lista hacia la izquierda">`;
     htmlCode += `<span class="fas fa-arrow-left"></span>`;
     htmlCode += `</button>`;
-    htmlCode += `<button type="button" class="btn btn-light text-muted border shadow-sm app-list-move-right" title="Mover esta lista hacia la derecha">`;
+    htmlCode += `<button type="button" class="js-col-right btn btn-light text-muted border shadow-sm app-list-move-right" title="Mover esta lista hacia la derecha">`;
     htmlCode += `<span class="fas fa-arrow-right"></span>`;
     htmlCode += `</button>`;
     htmlCode += `</div>`;
@@ -75,4 +75,5 @@ const paintList = () => {
   addListener('.js-btn-add-col', 'click', handleAddCol);
   addListenerAll('.js-del-col-btn', 'click', handleDelCol);
   addListenerAll('.js-new-card-btn', 'click', handleAddCard);
+  // addListenerAll('.js-col-right, .js-col-left', 'click', moveColumn);
 };
